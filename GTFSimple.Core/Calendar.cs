@@ -12,8 +12,8 @@ namespace GTFSimple.Core
         public bool Friday { get; set; }
         public bool Saturday { get; set; }
         public bool Sunday { get; set; }
-        public decimal StartDate { get; set; } //int instead?
-        public decimal EndDate { get; set; } //int instead?
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }
 

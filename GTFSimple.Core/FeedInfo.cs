@@ -22,14 +22,15 @@ namespace GTFSimple.Core
 
         /// <summary>
         /// Gets or sets the feed publisher URL. Required.
-        /// 
+        /// </summary>
+        /// <value>The feed publisher URL.</value>
+        /// <remarks>
         /// The feed_publisher_url field contains the URL of the feed publishing organization's website. 
         /// (This may be the same as one of the agency_url values in agency.txt.) 
         /// The value must be a fully qualified URL that includes http:// or https://, 
         /// and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html 
         /// for a description of how to create fully qualified URL values.
-        /// </summary>
-        /// <value>The feed publisher URL.</value>
+        /// </remarks>
         public Uri FeedPublisherUrl { get; set; }
 
         /// <summary>
@@ -44,7 +45,6 @@ namespace GTFSimple.Core
 
         /// <summary>
         /// Gets or sets the feed start date. Optional.
-        /// Gets or sets the feed end date. Optional.
         /// 
         /// The feed provides complete and reliable schedule information for service in the period from the beginning of the feed_start_date day to the end of the feed_end_date day. 
         /// Both days are given as dates in YYYYDDMM format as for calendar.txt, or left empty if unavailable. 
@@ -55,8 +55,21 @@ namespace GTFSimple.Core
         /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
         /// </summary>
         /// <value>The feed start date.</value>
-        public decimal? FeedStartDate { get; set; }
-        public decimal? FeedEndDate { get; set; }
+        public DateTime? FeedStartDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the feed end date. Optional.
+        /// 
+        /// The feed provides complete and reliable schedule information for service in the period from the beginning of the feed_start_date day to the end of the feed_end_date day. 
+        /// Both days are given as dates in YYYYDDMM format as for calendar.txt, or left empty if unavailable. 
+        /// The feed_end_date date must not precede the feed_start_date date if both are given. 
+        /// Feed providers are encouraged to give schedule data outside this period to advise of likely future service, 
+        /// but feed consumers should treat it mindful of its non-authoritative status. 
+        /// If feed_start_date or feed_end_date extend beyond the active calendar dates defined in calendar.txt and calendar_dates.txt, 
+        /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
+        /// </summary>
+        /// <value>The feed end date.</value>
+        public DateTime? FeedEndDate { get; set; }
         /// <summary>
         /// Gets or sets the feed version. Optional.
         /// 

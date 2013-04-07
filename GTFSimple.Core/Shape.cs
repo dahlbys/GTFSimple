@@ -7,9 +7,8 @@ namespace GTFSimple.Core
         public string Id { get; set; }
         public decimal PointLatitude { get; set; }
         public decimal PointLongitude { get; set; }
-        public decimal PointSequence { get; set; } //int instead?
-        public decimal DistanceTraveled { get; set; }
-
+        public uint PointSequence { get; set; }
+        public decimal? DistanceTraveled { get; set; }
     }
 }
 

@@ -12,7 +12,13 @@ namespace GTFSimple.Core
         public bool? DirectionId { get; set; }
         public string BlockId { get; set; }
         public string ShapeId { get; set; }
-        public bool? WheelchairAccessible { get; set; }
+        public WheelchairAccessibility? WheelchairAccessible { get; set; }
+    }
+
+    public enum TripDirection
+    {
+        Outbound = 0,
+        Inbound = 1,
     }
 }
 

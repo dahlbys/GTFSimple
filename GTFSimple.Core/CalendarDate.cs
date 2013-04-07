@@ -5,9 +5,14 @@ namespace GTFSimple.Core
     public class CalendarDate
     {
         public string ServiceId { get; set; }
-        public decimal Date { get; set; } //int instead?
+        public DateTime Date { get; set; }
         public bool ExceptionType { get; set; }
+    }
 
+    public enum ExceptionType
+    {
+        Added = 1,
+        Removed = 2,
     }
 }
 

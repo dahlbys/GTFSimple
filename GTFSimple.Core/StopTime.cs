@@ -8,11 +8,27 @@ namespace GTFSimple.Core
         public TimeSpan ArrivalTime { get; set; }
         public TimeSpan DepartureTime { get; set; }
         public string StopId { get; set; }
-        public int StopSequence { get; set; }
+        public uint StopSequence { get; set; }
         public string StopHeadsign { get; set; }
-        public bool? PickupType { get; set; } //better option?
-        public bool? DropOffType { get; set; } //better option?
+        public StopPickupType? PickupType { get; set; } //better option?
+        public StopDropOffType? DropOffType { get; set; } //better option?
         public decimal ShapeDistanceTraveled { get; set; } //better option?
+    }
+
+    public enum StopPickupType
+    {
+        Scheduled = 0,
+        NotAvailable = 1,
+        ArrangeByPhone = 2,
+        ArrangeByDriver = 3,
+    }
+
+    public enum StopDropOffType
+    {
+        Scheduled = 0,
+        NotAvailable = 1,
+        ArrangeByPhone = 2,
+        ArrangeByDriver = 3,
     }
 }
 

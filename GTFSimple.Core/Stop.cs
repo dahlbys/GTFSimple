@@ -12,10 +12,23 @@ namespace GTFSimple.Core
         public decimal Longitude { get; set; }
         public string ZoneId { get; set; }
         public Uri Url { get; set; }
-        public bool? LocationType { get; set; }
-        public bool? ParentStation { get; set; }
-        public string Timezone { get; set; }
-        public bool? WheelchairBoarding { get; set; }
+        public LocationType? LocationType { get; set; }
+        public string ParentStation { get; set; }
+        public TimeZoneInfo TimeZone { get; set; }
+        public WheelchairAccessibility? WheelchairBoarding { get; set; }
+    }
+
+    public enum LocationType
+    {
+        Stop = 0,
+        Station = 1,
+    }
+
+    public enum WheelchairAccessibility
+    {
+        Unspecified = 0,
+        Accessible = 1,
+        NotAccessible = 2,
     }
 }
 
