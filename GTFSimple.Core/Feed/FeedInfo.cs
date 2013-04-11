@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     /// <summary>
     /// The file contains information about the feed itself, rather than the services that the feed describes. 
@@ -18,6 +18,7 @@ namespace GTFSimple.Core
         /// GTFS-consuming applications can display this name when giving attribution for a particular feed's data.
         /// </summary>
         /// <value>The name of the feed publisher.</value>
+        [FieldName("feed_publisher_name")]
         public string FeedPublisherName { get; set; }
 
         /// <summary>
@@ -31,6 +32,7 @@ namespace GTFSimple.Core
         /// and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html 
         /// for a description of how to create fully qualified URL values.
         /// </remarks>
+        [FieldName("feed_publisher_url")]
         public Uri FeedPublisherUrl { get; set; }
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace GTFSimple.Core
         /// For an introduction to IETF BCP 47, please refer to http://www.rfc-editor.org/rfc/bcp/bcp47.txt and http://www.w3.org/International/articles/language-tags/.
         /// </summary>
         /// <value>The feed language.</value>
+        [FieldName("feed_lang")]
         public string FeedLanguage { get; set; }
 
         /// <summary>
@@ -55,6 +58,7 @@ namespace GTFSimple.Core
         /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
         /// </summary>
         /// <value>The feed start date.</value>
+        [FieldName("feed_start_date")]
         public DateTime? FeedStartDate { get; set; }
 
         /// <summary>
@@ -69,6 +73,7 @@ namespace GTFSimple.Core
         /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
         /// </summary>
         /// <value>The feed end date.</value>
+        [FieldName("feed_end_date")]
         public DateTime? FeedEndDate { get; set; }
         /// <summary>
         /// Gets or sets the feed version. Optional.
@@ -77,6 +82,7 @@ namespace GTFSimple.Core
         /// GTFS-consuming applications can display this value to help feed publishers determine whether the latest version of their feed has been incorporated.
         /// </summary>
         /// <value>The feed version.</value>
+        [FieldName("feed_version")]
         public string FeedVersion { get; set; }
 
     }
