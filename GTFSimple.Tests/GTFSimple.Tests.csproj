@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC32BC77-FF19-4088-B9FB-17085421B9A8}</ProjectGuid>
+    <ProjectGuid>{FDB95B90-0DFE-46D9-9988-F85BD8985568}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GTFSimple.Core</RootNamespace>
-    <AssemblyName>GTFSimple.Core</AssemblyName>
+    <RootNamespace>GTFSimple.Tests</RootNamespace>
+    <AssemblyName>GTFSimple.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -30,26 +30,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Agency.cs" />
-    <Compile Include="Stop.cs" />
-    <Compile Include="Route.cs" />
-    <Compile Include="Trip.cs" />
-    <Compile Include="StopTime.cs" />
-    <Compile Include="Calendar.cs" />
-    <Compile Include="CalendarDate.cs" />
-    <Compile Include="FareAttributes.cs" />
-    <Compile Include="FareRules.cs" />
-    <Compile Include="Shape.cs" />
-    <Compile Include="Frequency.cs" />
-    <Compile Include="Transfer.cs" />
-    <Compile Include="FeedInfo.cs" />
-    <Compile Include="Export\FeedFileWriter.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Export\" />
+    <ProjectReference Include="..\GTFSimple.Core\GTFSimple.Core.csproj">
+      <Project>{EC32BC77-FF19-4088-B9FB-17085421B9A8}</Project>
+      <Name>GTFSimple.Core</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
