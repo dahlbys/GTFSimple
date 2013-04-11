@@ -1,6 +1,4 @@
-using System;
-
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Shape
     {
@@ -11,4 +9,3 @@ namespace GTFSimple.Core
         public decimal? DistanceTraveled { get; set; }
     }
 }
-

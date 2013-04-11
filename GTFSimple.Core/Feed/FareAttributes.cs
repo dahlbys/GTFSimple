@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class FareAttributes
     {
@@ -25,4 +25,3 @@ namespace GTFSimple.Core
         TwoTranfers = 2,
     }
 }
-

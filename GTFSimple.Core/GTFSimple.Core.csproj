@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,22 +33,24 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feed\Agency.cs" />
+    <Compile Include="Feed\Calendar.cs" />
+    <Compile Include="Feed\CalendarDate.cs" />
+    <Compile Include="Feed\FareAttributes.cs" />
+    <Compile Include="Feed\FareRules.cs" />
+    <Compile Include="Feed\FeedInfo.cs" />
+    <Compile Include="Feed\Frequency.cs" />
+    <Compile Include="Feed\Route.cs" />
+    <Compile Include="Feed\Shape.cs" />
+    <Compile Include="Feed\Stop.cs" />
+    <Compile Include="Feed\StopTime.cs" />
+    <Compile Include="Feed\Transfer.cs" />
+    <Compile Include="Feed\Trip.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agency.cs" />
-    <Compile Include="Stop.cs" />
-    <Compile Include="Route.cs" />
-    <Compile Include="Trip.cs" />
-    <Compile Include="StopTime.cs" />
-    <Compile Include="Calendar.cs" />
-    <Compile Include="CalendarDate.cs" />
-    <Compile Include="FareAttributes.cs" />
-    <Compile Include="FareRules.cs" />
-    <Compile Include="Shape.cs" />
-    <Compile Include="Frequency.cs" />
-    <Compile Include="Transfer.cs" />
-    <Compile Include="FeedInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

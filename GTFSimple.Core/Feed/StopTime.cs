@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class StopTime
     {
@@ -31,4 +31,3 @@ namespace GTFSimple.Core
         ArrangeByDriver = 3,
     }
 }
-

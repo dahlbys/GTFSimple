@@ -1,7 +1,6 @@
 using System;
-using System.Globalization;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Agency
     {
@@ -10,8 +9,7 @@ namespace GTFSimple.Core
         public Uri Url { get; set; }
         public TimeZoneInfo TimeZone { get; set; }
         public string Language { get; set; } //or string?
-		public string Phone { get; set; }
+        public string Phone { get; set; }
         public Uri FareUrl { get; set; }
     }
 }
-

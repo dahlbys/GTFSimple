@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Frequency
     {
@@ -11,4 +11,3 @@ namespace GTFSimple.Core
         public bool? ExactTimes { get; set; }
     }
 }
-

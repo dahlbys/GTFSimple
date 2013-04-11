@@ -1,6 +1,4 @@
-using System;
-
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class FareRules
     {
@@ -12,4 +10,3 @@ namespace GTFSimple.Core
 
     }
 }
-

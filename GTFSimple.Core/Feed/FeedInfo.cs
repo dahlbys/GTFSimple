@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     /// <summary>
     /// The file contains information about the feed itself, rather than the services that the feed describes. 
@@ -81,4 +81,3 @@ namespace GTFSimple.Core
 
     }
 }
-

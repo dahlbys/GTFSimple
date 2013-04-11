@@ -1,6 +1,4 @@
-using System;
-
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Trip
     {
@@ -21,4 +19,3 @@ namespace GTFSimple.Core
         Inbound = 1,
     }
 }
-

@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class CalendarDate
     {
@@ -15,4 +15,3 @@ namespace GTFSimple.Core
         Removed = 2,
     }
 }
-

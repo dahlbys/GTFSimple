@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Route
     {
@@ -9,7 +9,7 @@ namespace GTFSimple.Core
         public string ShortName { get; set; }
         public string LongName { get; set; }
         public string Description { get; set; }
-        public RouteType Type { get; set; } 
+        public RouteType Type { get; set; }
         public Uri Url { get; set; }
         public string Color { get; set; } //better way to store hex?
         public string TextColor { get; set; } //better way to store hex?
@@ -27,4 +27,3 @@ namespace GTFSimple.Core
         Funicular = 7,
     }
 }
-

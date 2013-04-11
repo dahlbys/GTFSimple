@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Calendar
     {
@@ -16,4 +16,3 @@ namespace GTFSimple.Core
         public DateTime EndDate { get; set; }
     }
 }
-

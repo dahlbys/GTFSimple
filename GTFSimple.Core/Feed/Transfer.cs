@@ -1,6 +1,6 @@
 using System;
 
-namespace GTFSimple.Core
+namespace GTFSimple.Core.Feed
 {
     public class Transfer
     {
@@ -18,4 +18,3 @@ namespace GTFSimple.Core
         NoTransfers = 3,
     }
 }
-
