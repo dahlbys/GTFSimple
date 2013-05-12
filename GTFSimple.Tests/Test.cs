@@ -15,7 +15,7 @@ namespace GTFSimple.Tests
         {
             var writer = new FeedFileWriter();
 
-            writer.Write("agency", "Agency.txt");
+            writer.Write("calendar", "Calendar.txt");
         }
     }
 }
