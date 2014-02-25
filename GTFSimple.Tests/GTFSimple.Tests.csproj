@@ -39,8 +39,20 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Feed\AgencyTests.cs" />
+    <Compile Include="Core\Feed\CalendarDateTests.cs" />
     <Compile Include="Core\Feed\CalendarTests.cs" />
+    <Compile Include="Core\Feed\FareAttributesTests.cs" />
+    <Compile Include="Core\Feed\FareRulesTests.cs" />
     <Compile Include="Core\Feed\FeedEntityTestBase.cs" />
+    <Compile Include="Core\Feed\FeedInfoTests.cs" />
+    <Compile Include="Core\Feed\FrequencyTests.cs" />
+    <Compile Include="Core\Feed\RouteTests.cs" />
+    <Compile Include="Core\Feed\ShapeTests.cs" />
+    <Compile Include="Core\Feed\StopTests.cs" />
+    <Compile Include="Core\Feed\StopTimeTests.cs" />
+    <Compile Include="Core\Feed\TransferTests.cs" />
+    <Compile Include="Core\Feed\TripTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
