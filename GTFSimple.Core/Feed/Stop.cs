@@ -1,9 +1,10 @@
 using System;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Util;
 
 namespace GTFSimple.Core.Feed
 {
-    public class Stop
+    public class Stop : ILocation
     {
         [FieldName("stop_id")]
         public string Id { get; set; }
