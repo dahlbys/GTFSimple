@@ -29,10 +29,30 @@
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper">
+      <HintPath>..\packages\CsvHelper.1.17.0\lib\net40-client\CsvHelper.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Feed\AgencyTests.cs" />
+    <Compile Include="Core\Feed\CalendarDateTests.cs" />
+    <Compile Include="Core\Feed\CalendarTests.cs" />
+    <Compile Include="Core\Feed\FareAttributesTests.cs" />
+    <Compile Include="Core\Feed\FareRulesTests.cs" />
+    <Compile Include="Core\Feed\FeedEntityTestBase.cs" />
+    <Compile Include="Core\Feed\FeedInfoTests.cs" />
+    <Compile Include="Core\Feed\FrequencyTests.cs" />
+    <Compile Include="Core\Feed\RouteTests.cs" />
+    <Compile Include="Core\Feed\ShapeTests.cs" />
+    <Compile Include="Core\Feed\StopTests.cs" />
+    <Compile Include="Core\Feed\StopTimeTests.cs" />
+    <Compile Include="Core\Feed\TransferTests.cs" />
+    <Compile Include="Core\Feed\TripTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

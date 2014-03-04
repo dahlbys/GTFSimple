@@ -34,14 +34,17 @@
       <HintPath>..\packages\CsvHelper.1.17.0\lib\net40-client\CsvHelper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feed\Agency.cs" />
     <Compile Include="Feed\Calendar.cs" />
     <Compile Include="Feed\CalendarDate.cs" />
+    <Compile Include="Feed\Converters.cs" />
     <Compile Include="Feed\FareAttributes.cs" />
     <Compile Include="Feed\FareRules.cs" />
     <Compile Include="Feed\FeedInfo.cs" />
+    <Compile Include="Feed\FieldNameAttribute.cs" />
     <Compile Include="Feed\Frequency.cs" />
     <Compile Include="Feed\Route.cs" />
     <Compile Include="Feed\Shape.cs" />

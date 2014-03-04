@@ -1,13 +1,21 @@
 using System;
+using CsvHelper.TypeConversion;
 
 namespace GTFSimple.Core.Feed
 {
     public class Transfer
     {
+        [FieldName("from_stop_id")]
         public string FromStopId { get; set; }
+
+        [FieldName("to_stop_id")]
         public string ToStopId { get; set; }
-        public TranferType TransferType { get; set; } //use enum
-        public TimeSpan? MinimumTransferTime { get; set; } //int instead?
+
+        [FieldName("transfer_type", Format = "{0:D}")]
+        public TranferType TransferType { get; set; }
+
+        [FieldName("min_transfer_time"), TypeConverter(typeof(TimeSpanConverter))]
+        public TimeSpan? MinimumTransferTime { get; set; }
     }
 
     public enum TranferType
