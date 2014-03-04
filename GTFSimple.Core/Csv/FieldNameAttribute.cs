@@ -1,6 +1,6 @@
 using CsvHelper.Configuration;
 
-namespace GTFSimple.Core.Feed
+namespace GTFSimple.Core.Csv
 {
     internal class FieldNameAttribute : CsvFieldAttribute
     {

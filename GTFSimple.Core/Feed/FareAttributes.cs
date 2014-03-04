@@ -1,5 +1,6 @@
 using System;
 using CsvHelper.TypeConversion;
+using GTFSimple.Core.Csv;
 
 namespace GTFSimple.Core.Feed
 {

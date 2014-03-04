@@ -1,5 +1,6 @@
 ﻿using System;
 using GTFSimple.Core.Feed;
+using GTFSimple.Tests.Core.Csv;
 using NUnit.Framework;
 
 namespace GTFSimple.Tests.Core.Feed

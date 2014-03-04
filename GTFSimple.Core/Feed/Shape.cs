@@ -1,3 +1,5 @@
+using GTFSimple.Core.Csv;
+
 namespace GTFSimple.Core.Feed
 {
     public class Shape

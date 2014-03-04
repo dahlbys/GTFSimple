@@ -6,7 +6,7 @@ using System.Text;
 using CsvHelper;
 using NUnit.Framework;
 
-namespace GTFSimple.Tests.Core.Feed
+namespace GTFSimple.Tests.Core.Csv
 {
     public class FeedEntityTestBase
     {

@@ -39,12 +39,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Csv\FeedEntityTestBase.cs" />
     <Compile Include="Core\Feed\AgencyTests.cs" />
     <Compile Include="Core\Feed\CalendarDateTests.cs" />
     <Compile Include="Core\Feed\CalendarTests.cs" />
     <Compile Include="Core\Feed\FareAttributesTests.cs" />
     <Compile Include="Core\Feed\FareRulesTests.cs" />
-    <Compile Include="Core\Feed\FeedEntityTestBase.cs" />
     <Compile Include="Core\Feed\FeedInfoTests.cs" />
     <Compile Include="Core\Feed\FrequencyTests.cs" />
     <Compile Include="Core\Feed\RouteTests.cs" />

@@ -1,4 +1,5 @@
 using System;
+using GTFSimple.Core.Csv;
 
 namespace GTFSimple.Core.Feed
 {

@@ -1,7 +1,7 @@
 using System;
 using CsvHelper.TypeConversion;
 
-namespace GTFSimple.Core.Feed
+namespace GTFSimple.Core.Csv
 {
     internal class OneZeroConverter : DefaultTypeConverter
     {
