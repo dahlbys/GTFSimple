@@ -53,6 +53,8 @@
     <Compile Include="Core\Feed\StopTimeTests.cs" />
     <Compile Include="Core\Feed\TransferTests.cs" />
     <Compile Include="Core\Feed\TripTests.cs" />
+    <Compile Include="Core\Input\RouteStopTests.cs" />
+    <Compile Include="Core\Input\TripTimeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
