@@ -52,6 +52,8 @@
     <Compile Include="Feed\StopTime.cs" />
     <Compile Include="Feed\Transfer.cs" />
     <Compile Include="Feed\Trip.cs" />
+    <Compile Include="Generators\StopIdGenerator.cs" />
+    <Compile Include="Generators\TripGenerator.cs" />
     <Compile Include="Input\RouteStop.cs" />
     <Compile Include="Input\TripTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
