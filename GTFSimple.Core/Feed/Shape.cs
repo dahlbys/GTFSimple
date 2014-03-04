@@ -7,10 +7,10 @@ namespace GTFSimple.Core.Feed
         [FieldName("shape_id")]
         public string Id { get; set; }
 
-        [FieldName("shape_pt_lat", Format = "{0:0.00000}")]
+        [FieldName("shape_pt_lat", Format = "{0:0.000000}")]
         public double PointLatitude { get; set; }
 
-        [FieldName("shape_pt_lon", Format = "{0:0.00000}")]
+        [FieldName("shape_pt_lon", Format = "{0:0.000000}")]
         public double PointLongitude { get; set; }
 
         [FieldName("shape_pt_sequence")]
