@@ -23,6 +23,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("transfer_duration"), TypeConverter(typeof(TimeSpanConverter))]
         public TimeSpan? TransferDuration { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: {1:0.00} {2} ({3})",
+                                 FareId, Price, CurrencyType, PaymentMethod);
+        }
     }
 
     public enum PaymentMethod

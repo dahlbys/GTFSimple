@@ -31,6 +31,14 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("shape_dist_traveled")]
         public double? ShapeDistanceTraveled { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} #{1}: {2}{3}{4}",
+                                 TripId, StopSequence, StopId,
+                                 ArrivalTime == null ? "" : " @ " + ArrivalTime,
+                                 ArrivalTime == DepartureTime ? "" : " \u2013 " + DepartureTime);
+        }
     }
 
     public enum StopPickupType

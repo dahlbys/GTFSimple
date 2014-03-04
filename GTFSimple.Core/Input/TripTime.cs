@@ -35,5 +35,10 @@ namespace GTFSimple.Core.Input
 
         [FieldName("bikes_allowed", Format = "{0:D}")]
         public BikesAllowed? BikesAllowed { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} @ {2}", RouteId, ServiceId, StartTime);
+        }
     }
 }

@@ -13,6 +13,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("exception_type", Format = "{0:D}")]
         public ExceptionType ExceptionType { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} on {1:yyyy-MM-dd}: {2}",
+                                 ServiceId, Date, ExceptionType);
+        }
     }
 
     public enum ExceptionType

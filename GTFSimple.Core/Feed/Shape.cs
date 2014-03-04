@@ -18,5 +18,11 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("shape_dist_traveled", Format = "{0:0.0000}")]
         public double? DistanceTraveled { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} #{1} @ {2:0.000000}, {3:0.000000}",
+                                 Id, PointSequence, PointLatitude, PointLongitude);
+        }
     }
 }

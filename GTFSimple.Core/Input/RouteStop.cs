@@ -48,5 +48,11 @@ namespace GTFSimple.Core.Input
 
         [FieldName("wheelchair_boarding", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairBoarding { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} #{1} @ {2:0.000000}, {3:0.000000}",
+                                 RouteId, StopSequence, Latitude, Longitude);
+        }
     }
 }

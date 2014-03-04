@@ -33,6 +33,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("bikes_allowed", Format = "{0:D}")]
         public BikesAllowed? BikesAllowed { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: {1}/{2} {3} {4}",
+                                 Id, RouteId, ShapeId, ServiceId, Headsign);
+        }
     }
 
     public enum TripDirection

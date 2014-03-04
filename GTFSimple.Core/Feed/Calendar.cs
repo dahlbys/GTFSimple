@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 
@@ -35,5 +36,32 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("end_date", Format = "{0:yyyyMMdd}")]
         public DateTime EndDate { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} for {1:yyyy-MM-dd} to {2:yyyy-MM-dd}: {3}",
+                                 ServiceId, StartDate, EndDate, string.Join("", Days));
+        }
+
+        private IEnumerable<string> Days
+        {
+            get
+            {
+                if (Monday)
+                    yield return "M";
+                if (Tuesday)
+                    yield return "T";
+                if (Wednesday)
+                    yield return "W";
+                if (Thursday)
+                    yield return "H";
+                if (Friday)
+                    yield return "F";
+                if (Saturday)
+                    yield return "S";
+                if (Sunday)
+                    yield return "U";
+            }
+        }
     }
 }

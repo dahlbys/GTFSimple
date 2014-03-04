@@ -31,6 +31,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("route_text_color")]
         public string TextColor { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: {1} {2}",
+                                 Id, ShortName, LongName);
+        }
     }
 
     public enum RouteType
