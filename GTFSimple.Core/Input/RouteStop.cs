@@ -13,6 +13,9 @@ namespace GTFSimple.Core.Input
         [FieldName("route_id")]
         public string RouteId { get; set; }
 
+        [FieldName("shape_id")]
+        public string ShapeId { get; set; }
+
         [FieldName("stop_sequence")]
         public uint StopSequence { get; set; }
 
@@ -49,10 +52,28 @@ namespace GTFSimple.Core.Input
         [FieldName("wheelchair_boarding", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairBoarding { get; set; }
 
+        [FieldName("arrival_offset")]
+        public TimeSpan? ArrivalOffset { get; set; }
+
+        [FieldName("departure_offset")]
+        public TimeSpan? DepartureOffset { get; set; }
+
+        [FieldName("stop_headsign")]
+        public string StopHeadsign { get; set; }
+
+        [FieldName("pickup_type", Format = "{0:D}")]
+        public StopPickupType? PickupType { get; set; }
+
+        [FieldName("drop_off_type", Format = "{0:D}")]
+        public StopDropOffType? DropOffType { get; set; }
+
+        [FieldName("shape_dist_traveled")]
+        public double? ShapeDistanceTraveled { get; set; }
+
         public override string ToString()
         {
-            return string.Format("{0} #{1} @ {2:0.000000}, {3:0.000000}",
-                                 RouteId, StopSequence, Latitude, Longitude);
+            return string.Format("{0}/{1} #{2} @ {3:0.000000}, {4:0.000000}",
+                                 RouteId, ShapeId, StopSequence, Latitude, Longitude);
         }
     }
 }

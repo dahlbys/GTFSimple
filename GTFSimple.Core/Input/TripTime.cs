@@ -9,6 +9,9 @@ namespace GTFSimple.Core.Input
         [FieldName("route_id")]
         public string RouteId { get; set; }
 
+        [FieldName("shape_id")]
+        public string ShapeId { get; set; }
+
         [FieldName("service_id")]
         public string ServiceId { get; set; }
 
@@ -27,9 +30,6 @@ namespace GTFSimple.Core.Input
         [FieldName("block_id")]
         public string BlockId { get; set; }
 
-        [FieldName("shape_id")]
-        public string ShapeId { get; set; }
-
         [FieldName("wheelchair_accessible", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairAccessible { get; set; }
 
@@ -38,7 +38,8 @@ namespace GTFSimple.Core.Input
 
         public override string ToString()
         {
-            return string.Format("{0} {1} @ {2}", RouteId, ServiceId, StartTime);
+            return string.Format("{0}/{1} {2} @ {3}",
+                                 RouteId, ShapeId, ServiceId, StartTime);
         }
     }
 }

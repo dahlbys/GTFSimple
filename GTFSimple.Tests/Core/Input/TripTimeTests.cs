@@ -13,7 +13,7 @@ namespace GTFSimple.Tests.Core.Input
         public void HeaderHasExpectedFields()
         {
             AssertHeader<TripTime>(
-                "route_id,service_id,start_time,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed");
+                "route_id,shape_id,service_id,start_time,trip_headsign,trip_short_name,direction_id,block_id,wheelchair_accessible,bikes_allowed");
         }
 
         [Test]
@@ -40,30 +40,30 @@ namespace GTFSimple.Tests.Core.Input
                 new TripTime
                 {
                     RouteId = "B",
+                    ShapeId = "S12",
                     ServiceId = "WD",
                     StartTime = new TimeSpan(14, 40, 0),
                     DirectionId = TripDirection.Outbound,
-                    ShapeId = "S12",
                     WheelchairAccessible = WheelchairAccessibility.Accessible,
                     BikesAllowed = BikesAllowed.NotAllowed,
                 },
                 new TripTime
                 {
                     RouteId = "B",
+                    ShapeId = "S13",
                     ServiceId = "WD",
                     StartTime = new TimeSpan(18, 0, 0),
                     DirectionId = TripDirection.Inbound,
-                    ShapeId = "S13",
                     WheelchairAccessible = WheelchairAccessibility.NotAccessible,
                     BikesAllowed = BikesAllowed.Allowed,
                 },
             };
 
             AssertCsvRows(entities,
-                          "A,WE,08:00:00,Downtown,,,1,,,",
-                          "A,WE,11:20:00,Downtown,,,2,,,",
-                          "B,WD,14:40:00,,,0,,S12,1,2",
-                          "B,WD,18:00:00,,,1,,S13,2,1");
+                          "A,,WE,08:00:00,Downtown,,,1,,",
+                          "A,,WE,11:20:00,Downtown,,,2,,",
+                          "B,S12,WD,14:40:00,,,0,,1,2",
+                          "B,S13,WD,18:00:00,,,1,,2,1");
         }
     }
 }
