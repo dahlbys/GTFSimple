@@ -1,7 +1,9 @@
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("shapes")]
     public class Shape
     {
         [FieldName("shape_id")]

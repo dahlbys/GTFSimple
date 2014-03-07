@@ -1,9 +1,11 @@
 using System;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Feed;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Input
 {
+    [FeedFile("trip_times")]
     public class TripTime
     {
         [FieldName("route_id")]

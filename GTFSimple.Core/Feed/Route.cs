@@ -1,8 +1,10 @@
 using System;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("routes")]
     public class Route
     {
         [FieldName("route_id")]

@@ -1,7 +1,9 @@
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("fare_rules")]
     public class FareRules
     {
         [FieldName("fare_id")]

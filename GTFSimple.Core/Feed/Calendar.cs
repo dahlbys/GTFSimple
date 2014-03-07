@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("calendar")]
     public class Calendar
     {
         [FieldName("service_id")]

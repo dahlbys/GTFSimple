@@ -1,5 +1,6 @@
 using System;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
@@ -9,6 +10,7 @@ namespace GTFSimple.Core.Feed
     /// However, the publisher of the feed is sometimes a different entity than any of the agencies (in the case of regional aggregators). 
     /// In addition, there are some fields that are really feed-wide settings, rather than agency-wide.
     /// </summary>
+    [FeedFile("feed_info")]
     public class FeedInfo
     {
         /// <summary>

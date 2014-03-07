@@ -1,10 +1,12 @@
 using System;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Feed;
+using GTFSimple.Core.Files;
 using GTFSimple.Core.Util;
 
 namespace GTFSimple.Core.Input
 {
+    [FeedFile("route_stops")]
     public class RouteStop : ILocation
     {
         [FieldName("agency_id")]

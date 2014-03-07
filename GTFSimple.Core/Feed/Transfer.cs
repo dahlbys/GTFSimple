@@ -1,9 +1,11 @@
 using System;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("transfers")]
     public class Transfer
     {
         [FieldName("from_stop_id")]

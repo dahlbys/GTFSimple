@@ -1,9 +1,11 @@
 using System;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("frequencies")]
     public class Frequency
     {
         [FieldName("trip_id")]

@@ -1,9 +1,11 @@
 using System;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("fare_attributes")]
     public class FareAttributes
     {
         [FieldName("fare_id")]

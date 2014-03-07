@@ -1,8 +1,10 @@
 using System;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("agency")]
     public class Agency
     {
         [FieldName("agency_id")]
