@@ -53,6 +53,7 @@
     <Compile Include="Feed\Transfer.cs" />
     <Compile Include="Feed\Trip.cs" />
     <Compile Include="Files\FeedFileAttribute.cs" />
+    <Compile Include="Files\Registry.cs" />
     <Compile Include="Files\TypeExtensions.cs" />
     <Compile Include="Generators\StopGenerator.cs" />
     <Compile Include="Generators\StopIdGenerator.cs" />
