@@ -52,9 +52,19 @@
     <Compile Include="Feed\StopTime.cs" />
     <Compile Include="Feed\Transfer.cs" />
     <Compile Include="Feed\Trip.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Files\FeedFileAttribute.cs" />
+    <Compile Include="Files\Registry.cs" />
+    <Compile Include="Files\TypeExtensions.cs" />
+    <Compile Include="Generators\StopGenerator.cs" />
+    <Compile Include="Generators\StopIdGenerator.cs" />
+    <Compile Include="Generators\StopTimeGenerator.cs" />
+    <Compile Include="Generators\TripGenerator.cs" />
+    <Compile Include="Input\RouteStop.cs" />
+    <Compile Include="Input\TripTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\EnumerableExtensions.cs" />
+    <Compile Include="Util\Geo.cs" />
+    <Compile Include="Util\SelectWithIndexExtension.cs" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

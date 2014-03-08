@@ -1,19 +1,25 @@
+using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Feed;
 using GTFSimple.Core.Files;
 
-namespace GTFSimple.Core.Feed
+namespace GTFSimple.Core.Input
 {
-    [FeedFile("trips")]
-    public class Trip
+    [FeedFile("trip_times")]
+    public class TripTime
     {
         [FieldName("route_id")]
         public string RouteId { get; set; }
 
+        [FieldName("shape_id")]
+        public string ShapeId { get; set; }
+
         [FieldName("service_id")]
         public string ServiceId { get; set; }
 
-        [FieldName("trip_id")]
-        public string Id { get; set; }
+        [FieldName("start_time"), TypeConverter(typeof(TimeSpanHourMinuteSecondConverter))]
+        public TimeSpan StartTime { get; set; }
 
         [FieldName("trip_headsign")]
         public string Headsign { get; set; }
@@ -27,9 +33,6 @@ namespace GTFSimple.Core.Feed
         [FieldName("block_id")]
         public string BlockId { get; set; }
 
-        [FieldName("shape_id")]
-        public string ShapeId { get; set; }
-
         [FieldName("wheelchair_accessible", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairAccessible { get; set; }
 
@@ -38,21 +41,8 @@ namespace GTFSimple.Core.Feed
 
         public override string ToString()
         {
-            return string.Format("{0}: {1}/{2} {3} {4}",
-                                 Id, RouteId, ShapeId, ServiceId, Headsign);
+            return string.Format("{0}/{1} {2} @ {3}",
+                                 RouteId, ShapeId, ServiceId, StartTime);
         }
-    }
-
-    public enum TripDirection
-    {
-        Outbound = 0,
-        Inbound = 1,
-    }
-
-    public enum BikesAllowed
-    {
-        Unspecified = 0,
-        Allowed = 1,
-        NotAllowed = 2,
     }
 }

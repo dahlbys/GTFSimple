@@ -1,9 +1,13 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
+using GTFSimple.Core.Util;
 
 namespace GTFSimple.Core.Feed
 {
-    public class Stop
+    [FeedFile("stops")]
+    public class Stop : ILocation
     {
         [FieldName("stop_id")]
         public string Id { get; set; }
@@ -26,7 +30,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("zone_id")]
         public string ZoneId { get; set; }
 
-        [FieldName("stop_url")]
+        [FieldName("stop_url"), TypeConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
         [FieldName("location_type", Format = "{0:D}")]
@@ -40,6 +44,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("wheelchair_boarding", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairBoarding { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: '{1}' @ {2:0.000000}, {3:0.000000}",
+                                 Id, Name, Latitude, Longitude);
+        }
     }
 
     public enum LocationType

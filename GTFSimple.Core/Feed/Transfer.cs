@@ -1,9 +1,11 @@
 using System;
 using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("transfers")]
     public class Transfer
     {
         [FieldName("from_stop_id")]
@@ -15,7 +17,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("transfer_type", Format = "{0:D}")]
         public TranferType TransferType { get; set; }
 
-        [FieldName("min_transfer_time"), TypeConverter(typeof(TimeSpanConverter))]
+        [FieldName("min_transfer_time"), TypeConverter(typeof(TimeSpanSecondsConverter))]
         public TimeSpan? MinimumTransferTime { get; set; }
     }
 

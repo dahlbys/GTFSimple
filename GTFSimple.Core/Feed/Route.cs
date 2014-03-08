@@ -1,8 +1,11 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
+using GTFSimple.Core.Files;
 
 namespace GTFSimple.Core.Feed
 {
+    [FeedFile("routes")]
     public class Route
     {
         [FieldName("route_id")]
@@ -23,7 +26,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("route_type", Format = "{0:D}")]
         public RouteType Type { get; set; }
 
-        [FieldName("route_url")]
+        [FieldName("route_url"), TypeConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
         [FieldName("route_color")]
@@ -31,6 +34,12 @@ namespace GTFSimple.Core.Feed
 
         [FieldName("route_text_color")]
         public string TextColor { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: {1} {2}",
+                                 Id, ShortName, LongName);
+        }
     }
 
     public enum RouteType

@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTFSimple", "GTFSimple\GTFSimple.csproj", "{46D9B29D-D65F-4756-B8E2-EE000D8EEF52}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTFSimple.Tests", "GTFSimple.Tests\GTFSimple.Tests.csproj", "{FDB95B90-0DFE-46D9-9988-F85BD8985568}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTFSimple.Core", "GTFSimple.Core\GTFSimple.Core.csproj", "{EC32BC77-FF19-4088-B9FB-17085421B9A8}"
@@ -11,14 +13,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FDB95B90-0DFE-46D9-9988-F85BD8985568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FDB95B90-0DFE-46D9-9988-F85BD8985568}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB95B90-0DFE-46D9-9988-F85BD8985568}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB95B90-0DFE-46D9-9988-F85BD8985568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC32BC77-FF19-4088-B9FB-17085421B9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D9B29D-D65F-4756-B8E2-EE000D8EEF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D9B29D-D65F-4756-B8E2-EE000D8EEF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D9B29D-D65F-4756-B8E2-EE000D8EEF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D9B29D-D65F-4756-B8E2-EE000D8EEF52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = GTFSimple.Tests\GTFSimple.Tests.csproj
