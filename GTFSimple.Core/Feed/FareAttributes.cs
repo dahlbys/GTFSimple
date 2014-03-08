@@ -23,7 +23,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("transfers", Format = "{0:D}")]
         public FareTransferType? Transfers { get; set; }
 
-        [FieldName("transfer_duration"), TypeConverter(typeof(TimeSpanConverter))]
+        [FieldName("transfer_duration"), TypeConverter(typeof(TimeSpanSecondsConverter))]
         public TimeSpan? TransferDuration { get; set; }
 
         public override string ToString()

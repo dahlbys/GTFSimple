@@ -17,7 +17,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("transfer_type", Format = "{0:D}")]
         public TranferType TransferType { get; set; }
 
-        [FieldName("min_transfer_time"), TypeConverter(typeof(TimeSpanConverter))]
+        [FieldName("min_transfer_time"), TypeConverter(typeof(TimeSpanSecondsConverter))]
         public TimeSpan? MinimumTransferTime { get; set; }
     }
 

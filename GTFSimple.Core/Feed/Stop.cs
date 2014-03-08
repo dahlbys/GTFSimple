@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Files;
 using GTFSimple.Core.Util;
@@ -29,7 +30,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("zone_id")]
         public string ZoneId { get; set; }
 
-        [FieldName("stop_url")]
+        [FieldName("stop_url"), TypeConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
         [FieldName("location_type", Format = "{0:D}")]

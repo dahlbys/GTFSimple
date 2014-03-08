@@ -12,31 +12,31 @@ namespace GTFSimple.Core.Feed
         [FieldName("service_id")]
         public string ServiceId { get; set; }
 
-        [FieldName("monday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("monday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Monday { get; set; }
 
-        [FieldName("tuesday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("tuesday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Tuesday { get; set; }
 
-        [FieldName("wednesday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("wednesday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Wednesday { get; set; }
 
-        [FieldName("thursday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("thursday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Thursday { get; set; }
 
-        [FieldName("friday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("friday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Friday { get; set; }
 
-        [FieldName("saturday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("saturday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Saturday { get; set; }
 
-        [FieldName("sunday"), TypeConverter(typeof(OneZeroConverter))]
+        [FieldName("sunday"), TypeConverter(typeof(BooleanOneZeroConverter))]
         public bool Sunday { get; set; }
 
-        [FieldName("start_date", Format = "{0:yyyyMMdd}")]
+        [FieldName("start_date"), TypeConverter(typeof(DateConverter))]
         public DateTime StartDate { get; set; }
 
-        [FieldName("end_date", Format = "{0:yyyyMMdd}")]
+        [FieldName("end_date"), TypeConverter(typeof(DateConverter))]
         public DateTime EndDate { get; set; }
 
         public override string ToString()

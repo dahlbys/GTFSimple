@@ -18,8 +18,24 @@ namespace GTFSimple.Tests.Core.Csv
                 csvWriter.WriteRecord(entity);
             }
 
-            Assert.AreEqual(expected + Environment.NewLine, sb.ToString());
+            var actual = sb.ToString();
+            Assert.AreEqual(expected + Environment.NewLine, actual);
+
+            //using (var csvReader = CsvReader<T>(actual))
+            //{
+            //    Assert.True(csvReader.Read());
+            //    var record = csvReader.GetRecord<T>();
+            //    Assert.NotNull(record);
+            //}
         }
+
+        //private static CsvReader CsvReader<T>(string actual) where T : class
+        //{
+        //    return new CsvReader(new StringReader(actual))
+        //    {
+        //        Configuration = { HasHeaderRecord = false },
+        //    };
+        //}
 
         protected static void AssertCsvRows<T>(IEnumerable<T> entities, params string[] expected) where T : class
         {

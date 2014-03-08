@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Feed;
 using GTFSimple.Core.Files;
@@ -39,7 +40,7 @@ namespace GTFSimple.Core.Input
         [FieldName("zone_id")]
         public string ZoneId { get; set; }
 
-        [FieldName("stop_url")]
+        [FieldName("stop_url"), TypeConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
         [FieldName("location_type", Format = "{0:D}")]
@@ -54,10 +55,10 @@ namespace GTFSimple.Core.Input
         [FieldName("wheelchair_boarding", Format = "{0:D}")]
         public WheelchairAccessibility? WheelchairBoarding { get; set; }
 
-        [FieldName("arrival_offset")]
+        [FieldName("arrival_offset"), TypeConverter(typeof(TimeSpanHourMinuteSecondConverter))]
         public TimeSpan? ArrivalOffset { get; set; }
 
-        [FieldName("departure_offset")]
+        [FieldName("departure_offset"), TypeConverter(typeof(TimeSpanHourMinuteSecondConverter))]
         public TimeSpan? DepartureOffset { get; set; }
 
         [FieldName("stop_headsign")]

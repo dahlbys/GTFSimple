@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Files;
 
@@ -25,7 +26,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("route_type", Format = "{0:D}")]
         public RouteType Type { get; set; }
 
-        [FieldName("route_url")]
+        [FieldName("route_url"), TypeConverter(typeof(UriConverter))]
         public Uri Url { get; set; }
 
         [FieldName("route_color")]

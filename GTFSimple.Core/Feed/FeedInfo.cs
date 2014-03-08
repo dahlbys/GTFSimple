@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Files;
 
@@ -61,7 +62,7 @@ namespace GTFSimple.Core.Feed
         /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
         /// </summary>
         /// <value>The feed start date.</value>
-        [FieldName("feed_start_date", Format = "{0:yyyyMMdd}")]
+        [FieldName("feed_start_date"), TypeConverter(typeof(DateConverter))]
         public DateTime? FeedStartDate { get; set; }
 
         /// <summary>
@@ -76,7 +77,7 @@ namespace GTFSimple.Core.Feed
         /// the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.
         /// </summary>
         /// <value>The feed end date.</value>
-        [FieldName("feed_end_date", Format = "{0:yyyyMMdd}")]
+        [FieldName("feed_end_date"), TypeConverter(typeof(DateConverter))]
         public DateTime? FeedEndDate { get; set; }
 
         /// <summary>

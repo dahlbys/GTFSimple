@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Files;
 
@@ -10,10 +11,10 @@ namespace GTFSimple.Core.Feed
         [FieldName("trip_id")]
         public string TripId { get; set; }
 
-        [FieldName("arrival_time")]
+        [FieldName("arrival_time"), TypeConverter(typeof(TimeSpanHourMinuteSecondConverter))]
         public TimeSpan? ArrivalTime { get; set; }
 
-        [FieldName("departure_time")]
+        [FieldName("departure_time"), TypeConverter(typeof(TimeSpanHourMinuteSecondConverter))]
         public TimeSpan? DepartureTime { get; set; }
 
         [FieldName("stop_id")]

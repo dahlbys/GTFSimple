@@ -1,4 +1,5 @@
 using System;
+using CsvHelper.TypeConversion;
 using GTFSimple.Core.Csv;
 using GTFSimple.Core.Files;
 
@@ -10,7 +11,7 @@ namespace GTFSimple.Core.Feed
         [FieldName("service_id")]
         public string ServiceId { get; set; }
 
-        [FieldName("date", Format = "{0:yyyyMMdd}")]
+        [FieldName("date"), TypeConverter(typeof(DateConverter))]
         public DateTime Date { get; set; }
 
         [FieldName("exception_type", Format = "{0:D}")]
